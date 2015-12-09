@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :players
 
+  get 'players/:team_id/new', to: 'players#new'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

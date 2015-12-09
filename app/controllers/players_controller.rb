@@ -6,10 +6,11 @@ class PlayersController < ApplicationController
 
   def new
     @player = Player.new
+    @team_id = params[:team_id]
   end 
 
   def create
-    Player.create(player_params)
+    Team.find(params[:player][:team_id]).players.create(player_params)
     redirect_to(players_path)
   end
 
@@ -37,7 +38,7 @@ class PlayersController < ApplicationController
 
   def player_params
     #permits these elements in the params to be accessed
-    params.require(:player).permit(:name, :age, :shirt_number, :gender, :position)
+    params.require(:player).permit(:name, :age, :shirt_number, :gender, :position, :team_id)
   end
 
 end

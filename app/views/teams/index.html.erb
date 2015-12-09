@@ -8,6 +8,7 @@
 <%= link_to("Show #{team.name}", team_path(team))%><br>
 <%= link_to("Edit Team", edit_team_path(team))%><br>
 <%= button_to("Delete Team", team_path(team), method: :delete, data: {confirm: 'Are you sure you want to delete this team?'}) %>
+<br>
+<%= link_to("Add players to team", "players/#{team.id}/new") %>
 <br><br>
-
 <% end %>
