@@ -1,0 +1,22 @@
+
+<%= form_for @player do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+  <br>
+  <%= f.label :position %>
+  <%= f.text_field :position %>
+  <br>
+  <%= f.label :shirt_number %>
+  <%= f.text_field :shirt_number %>
+  <br>
+  <%= f.radio_button(:gender, "M") %>
+  <%= f.label(:gender_M, "Male") %>
+  <%= f.radio_button(:gender, "F") %>
+  <%= f.label(:gender_F, "Female") %>
+  <br>
+  <%= f.submit 'Edit player' %>
+
+<% end %>

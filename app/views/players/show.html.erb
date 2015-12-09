@@ -1,0 +1,10 @@
+<% if @player.gender == "M"%>
+  <% pronoun = "he" %>
+  <% else %>
+  <% pronoun = "she"%>
+  <% end %>
+
+
+<h1><%= @player.name %></h1>
+<p><%= @player.name%> is <%= @player.age%> years old, <%= pronoun%> plays for <%= @player.team.name %> as a <%= @player.position %> wearing shirt number <%= @player.shirt_number %>. </p>
+
